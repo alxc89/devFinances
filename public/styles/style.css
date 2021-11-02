@@ -171,7 +171,7 @@ table tbody tr td:last-child {
 table thead th {
   background: white;
   font-weight: normal;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: left;
 }
 
@@ -191,16 +191,28 @@ td.description {
   color: var(--dark-blue);
 }
 
-td.income {
+td.type {
+  color: var(--dark-blue);
+}
+
+td.Entrada {
   color: #12a454;
 }
 
-td.expense {
+td.Saída {
   color: #e92929;
 }
 
 td.date {
   color: var(--dark-blue);
+}
+
+td > a {
+  cursor: pointer;
+  height: 100%;
+}
+td > img {
+  cursor: pointer;
 }
 
 /*** Modal ***/
@@ -228,6 +240,14 @@ td.date {
   padding: 2.4rem;
   position: relative;
   z-index: 1;
+}
+
+.type {
+  margin-top: 8px;
+}
+
+.type select {
+  width: 20%;
 }
 
 /*** Form ***/

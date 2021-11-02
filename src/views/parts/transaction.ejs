@@ -1,0 +1,20 @@
+<tbody>
+  <% transactions.forEach(transaction => { %>
+  <tr>
+    <td class="description"><%= transaction.description %></td>
+    <td class="type"><%= transaction.moviment_type %></td>
+    <td class="<%= transaction.moviment_type %>"><%= transaction.amount %></td>
+    <td class="date"><%= transaction.date %></td>
+    <td>
+      <a>
+        <img
+          id="<%= transaction.id %>"
+          data-id="<%= transaction.id %>"
+          src="./assets/minus.svg"
+          alt="Remover transação"
+        />
+      </a>
+    </td>
+  </tr>
+  <% }) %>
+</tbody>

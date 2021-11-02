@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>dev.finance$</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logo Dev Finance" />
+    </header>
+
+    <main class="container">
+      <section id="balance"><%- include('parts/balance.ejs')%></section>
+
+      <section id="transaction">
+        <h2 class="sr-only">Transações</h2>
+
+        <a href="#" class="button new" onclick="Modal.open()"
+          >+ Nova Transação</a
+        >
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Tipo</th>
+              <th>Valor</th>
+              <th>Data</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <%- include('parts/transaction.ejs')%>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-overlay"><%- include('parts/modal.ejs')%></div>
+
+    <footer><%- include('parts/footer.ejs')%></footer>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
