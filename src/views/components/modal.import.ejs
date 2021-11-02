@@ -1,0 +1,52 @@
+<div class="modal-import">
+  <div id="form">
+    <h2>Importar Transação</h2>
+    <form action="/create" method="POST">
+      <div class="input-group">
+        <label class="sr-only" for="description">Descrição</label>
+        <input
+          type="text"
+          name="description"
+          id="description"
+          placeholder="Descrição"
+        />
+
+        <div class="input-group">
+          <label class="sr-only" for="amount">Valor</label
+          ><input
+            type="number"
+            step="0.01"
+            name="amount"
+            id="amount"
+            placeholder="Valor"
+          />
+
+          <small
+            >Use o sinal - (negativo) para depesas e , (virgulas) para casas
+            decimais</small
+          >
+
+          <div class="input-group">
+            <label for="date" class="sr-only">Data</label
+            ><input type="date" name="date" id="date" />
+          </div>
+
+          <div class="type">
+            <label for="type">Escolha o tipo: </label>
+            <select name="type" id="">
+              <option value="Escolha o Tipo"></option>
+              <option value="Entrada">Entrada</option>
+              <option value="Saída">Saida</option>
+            </select>
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" class="button cancel" onclick="Modal.close()"
+              >Cancelar</a
+            ><button>Salvar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

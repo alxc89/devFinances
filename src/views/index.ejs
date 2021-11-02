@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <title>dev.finance$</title>
+    <title>Financeiro Pessoal</title>
   </head>
 
   <body>
@@ -25,10 +25,22 @@
 
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
-
-        <a href="#" class="button new" onclick="Modal.open()"
-          >+ Nova Transação</a
-        >
+        <div class="create-transactions">
+          <a
+            href="#"
+            class="button new-transaction"
+            id="new-transaction"
+            onclick="Modal.open(id)"
+            >+ Nova Transação</a
+          >
+          <a
+            href="#"
+            class="button import-transaction"
+            id="import-transaction"
+            onclick="Modal.open(id)"
+            >+ Importar Transações</a
+          >
+        </div>
         <table id="data-table">
           <thead>
             <tr>
@@ -45,7 +57,10 @@
       </section>
     </main>
 
-    <div class="modal-overlay"><%- include('components/modal.ejs')%></div>
+    <div class="modal-overlay">
+      <%- include('components/modal.ejs')%> <%-
+      include('components/modal.import.ejs')%>
+    </div>
 
     <footer><%- include('components/footer.ejs')%></footer>
 
