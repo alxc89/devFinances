@@ -21,7 +21,7 @@
     </header>
 
     <main class="container">
-      <section id="balance"><%- include('parts/balance.ejs')%></section>
+      <section id="balance"><%- include('components/balance.ejs')%></section>
 
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
@@ -40,14 +40,14 @@
             </tr>
           </thead>
 
-          <%- include('parts/transaction.ejs')%>
+          <%- include('components/transaction.ejs')%>
         </table>
       </section>
     </main>
 
-    <div class="modal-overlay"><%- include('parts/modal.ejs')%></div>
+    <div class="modal-overlay"><%- include('components/modal.ejs')%></div>
 
-    <footer><%- include('parts/footer.ejs')%></footer>
+    <footer><%- include('components/footer.ejs')%></footer>
 
     <script src="./script/script.js"></script>
   </body>

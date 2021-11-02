@@ -171,7 +171,6 @@ table tbody tr td:last-child {
 table thead th {
   background: white;
   font-weight: normal;
-  padding: 1rem 1rem;
   text-align: left;
 }
 
