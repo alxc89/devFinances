@@ -1,0 +1,29 @@
+<div class="modal-import">
+  <div id="form-import">
+    <h2>Importar Transação</h2>
+    <form>
+      <div class="dropzone" tabindex="0">
+        <label for="input-dropzone" class="sr-only" for="description"
+          >Descrição</label
+        >
+        <input
+          accept=".csv, application/vnd.ms-excel, text/csv"
+          class="input-dropzone"
+          multiple
+          type="file"
+          autocomplete="off"
+          data-id="upload"
+          tabindex="-1"
+          id="input-dropzone"
+        />
+        <label for="input-dropzone"
+          ><small> Somente arquivos .CSV </small>
+        </label>
+      </div>
+      <div class="input-group actions">
+        <a href="" class="button cancel" onclick="Modal.close()">Cancelar</a>
+        <button>Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
